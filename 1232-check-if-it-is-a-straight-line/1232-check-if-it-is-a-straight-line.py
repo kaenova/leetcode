@@ -17,11 +17,11 @@ class Solution(object):
                 return 0.0, False, True
             
             return dominator / divider, False, False
-        
-        i_slope, i_x_axis, i_y_axis = slope(coordinates[0], coordinates[1])
-        for i in range(1, len(coordinates) - 1):
-            c1 = coordinates[i]
-            c2 = coordinates[i + 1]
+
+        c1 = coordinates[0]
+        i_slope, i_x_axis, i_y_axis = slope(c1, coordinates[1])
+        for i in range(1, len(coordinates)):
+            c2 = coordinates[i]
             c_slope, c_x_axis, c_y_axis = slope(c1, c2)
             
             if i_x_axis and not c_x_axis:
