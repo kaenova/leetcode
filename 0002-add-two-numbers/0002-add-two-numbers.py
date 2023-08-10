@@ -44,16 +44,6 @@ class Solution:
                 reminder = 0
                 break
             
-            # Only l1 left
-#             if cl2 is None and cl1 is not None:
-#                 current.next = cl1
-#                 break
-            
-            # Only l2 left
-            # if cl1 is None and cl2 is not None:
-            #     current.next = cl2
-            #     break
-            
             total, reminder = self.onesTotal(cl1, cl2, reminder)
             current.next = ListNode(total, None)
             
